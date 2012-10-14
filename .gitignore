@@ -8,7 +8,6 @@ proprietary/system/media/video/Sunset.480p.mp4
 proprietary/system/vendor/etc/sirfgps.conf
 proprietary/system/vendor/etc/smc_normal_world_android_cfg.ini
 proprietary/system/vendor/firmware/ducati-m3.bin
-proprietary/system/vendor/firmware/libpn544_fw.so
 proprietary/system/vendor/firmware/smc_pa_wvdrm.ift
 proprietary/system/vendor/lib/drm/libdrmwvmplugin.so
 proprietary/system/vendor/lib/hw/gps.omap4.so

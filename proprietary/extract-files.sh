@@ -3,7 +3,6 @@ adb pull /system/vendor/etc/smc_normal_world_android_cfg.ini system/vendor/etc/s
 adb pull /system/vendor/etc/sirfgps.conf system/vendor/etc/sirfgps.conf
 adb pull /system/vendor/firmware/smc_pa_wvdrm.ift system/vendor/firmware/smc_pa_wvdrm.ift
 adb pull /system/vendor/firmware/ducati-m3.bin system/vendor/firmware/ducati-m3.bin
-adb pull /system/vendor/firmware/libpn544_fw.so system/vendor/firmware/libpn544_fw.so
 adb pull /system/vendor/lib/drm/libdrmwvmplugin.so system/vendor/lib/drm/libdrmwvmplugin.so
 adb pull /system/vendor/lib/hw/gps.omap4.so system/vendor/lib/hw/gps.omap4.so
 adb pull /system/vendor/lib/libWVStreamControlAPI_L1.so system/vendor/lib/libWVStreamControlAPI_L1.so

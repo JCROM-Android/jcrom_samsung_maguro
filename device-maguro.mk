@@ -1,5 +1,8 @@
 LOCAL_PATH := jcrom/samsung/maguro
 
+PRODUCT_PACKAGES += \
+    Gallery2
+
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/media/video/AndroidInSpace.480p.mp4:system/media/video/AndroidInSpace.480p.mp4 \
 	$(LOCAL_PATH)/proprietary/system/media/video/AndroidInSpace.240p.mp4:system/media/video/AndroidInSpace.240p.mp4 \
@@ -24,4 +27,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/hw/gps.omap4.so:system/vendor/lib/hw/gps.omap4.so
+
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage8.mk)
 

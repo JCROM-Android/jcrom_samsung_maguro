@@ -1,14 +1,16 @@
 #!/bin/bash
-echo wait a few minutes.
-tar zxf yakju-jop40c-factory-267d243c.tgz
-cd yakju-jop40c
-unzip image-yakju-jop40c.zip
+echo "Download and Deodexing... Please wait."
+wget -nc -q https://dl.google.com/dl/android/aosp/yakju-jop40d-factory-279cdc5d.tgz
+tar zxf yakju-jop40d-factory-279cdc5d.tgz
+cd yakju-jop40d
+unzip image-yakju-jop40d.zip
 cd ../
-./simg2img yakju-jop40c/system.img system.ext4.img
+./simg2img yakju-jop40d/system.img system.ext4.img
 mkdir system
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
 sync
+mkdir -p system/lib
 mkdir -p system/vendor/etc
 mkdir -p system/vendor/firmware
 mkdir -p system/vendor/lib/drm
@@ -21,6 +23,8 @@ mkdir -p system/vendor/pittpatt/models/detection/yaw_roll_face_detectors.6/head-
 mkdir -p system/vendor/pittpatt/models/detection/yaw_roll_face_detectors.6/head-y0-yi45-p0-pi45-rp30-ri30.5-v24
 mkdir -p system/vendor/pittpatt/models/recognition/face.face.y0-y0-22-b-N
 mkdir -p system/media/video
+cp -a tmp/lib/liblightcycle.so system/lib/liblightcycle.so
+cp -a tmp/lib/libjni_mosaic.so system/lib/libjni_mosaic.so
 cp -a tmp/vendor/etc/smc_normal_world_android_cfg.ini system/vendor/etc/smc_normal_world_android_cfg.ini
 cp -a tmp/vendor/etc/sirfgps.conf system/vendor/etc/sirfgps.conf
 cp -a tmp/vendor/firmware/smc_pa_wvdrm.ift system/vendor/firmware/smc_pa_wvdrm.ift
@@ -46,6 +50,6 @@ cp -a tmp/media/PFFprec_600.emd system/media/PFFprec_600.emd
 cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
 sudo umount tmp
 rm -rf tmp
-rm -rf yakju-jop40c
+rm -rf yakju-jop40d
 rm system.ext4.img
 

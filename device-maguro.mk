@@ -1,6 +1,7 @@
 LOCAL_PATH := jcrom/samsung/maguro
 
 PRODUCT_PACKAGES += \
+    Browser \
     Gallery2
 
 PRODUCT_COPY_FILES += \

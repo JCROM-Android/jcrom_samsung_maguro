@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "Download and Deodexing... Please wait."
-wget -nc -q https://dl.google.com/dl/android/aosp/yakju-jop40d-factory-279cdc5d.tgz
-tar zxf yakju-jop40d-factory-279cdc5d.tgz
-cd yakju-jop40d
-unzip image-yakju-jop40d.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/yakju-jdq39-factory-b2ebb5f3.tgz
+tar zxf yakju-jdq39-factory-b2ebb5f3.tgz
+cd yakju-jdq39
+unzip image-yakju-jdq39.zip
 cd ../
-./simg2img yakju-jop40d/system.img system.ext4.img
+./simg2img yakju-jdq39/system.img system.ext4.img
 mkdir system
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
@@ -25,6 +25,7 @@ mkdir -p system/vendor/pittpatt/models/recognition/face.face.y0-y0-22-b-N
 mkdir -p system/media/video
 cp -a tmp/lib/liblightcycle.so system/lib/liblightcycle.so
 cp -a tmp/lib/libjni_mosaic.so system/lib/libjni_mosaic.so
+cp -a tmp/lib/libgoggles_clientvision.so system/lib/libgoggles_clientvision.so
 cp -a tmp/vendor/etc/smc_normal_world_android_cfg.ini system/vendor/etc/smc_normal_world_android_cfg.ini
 cp -a tmp/vendor/etc/sirfgps.conf system/vendor/etc/sirfgps.conf
 cp -a tmp/vendor/firmware/smc_pa_wvdrm.ift system/vendor/firmware/smc_pa_wvdrm.ift
@@ -48,8 +49,22 @@ cp -a tmp/media/video/Sunset.480p.mp4 system/media/video/Sunset.480p.mp4
 cp -a tmp/media/LMprec_508.emd system/media/LMprec_508.emd
 cp -a tmp/media/PFFprec_600.emd system/media/PFFprec_600.emd
 cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
+cp -a tmp/lib/libdrmdecrypt.so ../../../../vendor/widevine/maguro/proprietary/libdrmdecrypt.so
+cp -a tmp/vendor/lib/hw/gralloc.omap4.so ../../../../vendor/imgtec/maguro/proprietary/gralloc.omap4.so
+cp -a tmp/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so ../../../../vendor/imgtec/maguro/proprietary/libEGL_POWERVR_SGX540_120.so
+cp -a tmp/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so ../../../../vendor/imgtec/maguro/proprietary/libGLESv1_CM_POWERVR_SGX540_120.so
+cp -a tmp/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so ../../../../vendor/imgtec/maguro/proprietary/libGLESv2_POWERVR_SGX540_120.so
+cp -a tmp/vendor/lib/libIMGegl.so ../../../../vendor/imgtec/maguro/proprietary/libIMGegl.so
+cp -a tmp/vendor/lib/libPVRScopeServices.so ../../../../vendor/imgtec/maguro/proprietary/libPVRScopeServices.so
+cp -a tmp/vendor/lib/libglslcompiler.so ../../../../vendor/imgtec/maguro/proprietary/libglslcompiler.so
+cp -a tmp/vendor/lib/libpvr2d.so ../../../../vendor/imgtec/maguro/proprietary/libpvr2d.so
+cp -a tmp/vendor/lib/libpvrANDROID_WSEGL.so ../../../../vendor/imgtec/maguro/proprietary/libpvrANDROID_WSEGL.so
+cp -a tmp/vendor/lib/libsrv_init.so ../../../../vendor/imgtec/maguro/proprietary/libsrv_init.so
+cp -a tmp/vendor/lib/libsrv_um.so ../../../../vendor/imgtec/maguro/proprietary/libsrv_um.so
+cp -a tmp/vendor/lib/libusc.so ../../../../vendor/imgtec/maguro/proprietary/libusc.so
+cp -a tmp/vendor/bin/pvrsrvctl ../../../../vendor/imgtec/maguro/proprietary/pvrsrvctl
 sudo umount tmp
 rm -rf tmp
-rm -rf yakju-jop40d
+rm -rf yakju-jdq39
 rm system.ext4.img
 

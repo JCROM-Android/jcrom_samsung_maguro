@@ -29,7 +29,8 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
 	$(LOCAL_PATH)/proprietary/system/vendor/lib/hw/gps.omap4.so:system/vendor/lib/hw/gps.omap4.so \
 	$(LOCAL_PATH)/proprietary/system/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so \
-	$(LOCAL_PATH)/proprietary/system/lib/liblightcycle.so:system/lib/liblightcycle.so
+	$(LOCAL_PATH)/proprietary/system/lib/liblightcycle.so:system/lib/liblightcycle.so \
+    $(LOCAL_PATH)/proprietary/system/lib/libgoggles_clientvision.so:system/lib/libgoggles_clientvision.so
 
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage8.mk)
 

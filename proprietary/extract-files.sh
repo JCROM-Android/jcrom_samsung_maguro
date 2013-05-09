@@ -49,20 +49,6 @@ cp -a tmp/media/video/Sunset.480p.mp4 system/media/video/Sunset.480p.mp4
 cp -a tmp/media/LMprec_508.emd system/media/LMprec_508.emd
 cp -a tmp/media/PFFprec_600.emd system/media/PFFprec_600.emd
 cp -a tmp/media/bootanimation.zip system/media/bootanimation.zip
-cp -a tmp/lib/libdrmdecrypt.so ../../../../vendor/widevine/maguro/proprietary/libdrmdecrypt.so
-cp -a tmp/vendor/lib/hw/gralloc.omap4.so ../../../../vendor/imgtec/maguro/proprietary/gralloc.omap4.so
-cp -a tmp/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so ../../../../vendor/imgtec/maguro/proprietary/libEGL_POWERVR_SGX540_120.so
-cp -a tmp/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so ../../../../vendor/imgtec/maguro/proprietary/libGLESv1_CM_POWERVR_SGX540_120.so
-cp -a tmp/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so ../../../../vendor/imgtec/maguro/proprietary/libGLESv2_POWERVR_SGX540_120.so
-cp -a tmp/vendor/lib/libIMGegl.so ../../../../vendor/imgtec/maguro/proprietary/libIMGegl.so
-cp -a tmp/vendor/lib/libPVRScopeServices.so ../../../../vendor/imgtec/maguro/proprietary/libPVRScopeServices.so
-cp -a tmp/vendor/lib/libglslcompiler.so ../../../../vendor/imgtec/maguro/proprietary/libglslcompiler.so
-cp -a tmp/vendor/lib/libpvr2d.so ../../../../vendor/imgtec/maguro/proprietary/libpvr2d.so
-cp -a tmp/vendor/lib/libpvrANDROID_WSEGL.so ../../../../vendor/imgtec/maguro/proprietary/libpvrANDROID_WSEGL.so
-cp -a tmp/vendor/lib/libsrv_init.so ../../../../vendor/imgtec/maguro/proprietary/libsrv_init.so
-cp -a tmp/vendor/lib/libsrv_um.so ../../../../vendor/imgtec/maguro/proprietary/libsrv_um.so
-cp -a tmp/vendor/lib/libusc.so ../../../../vendor/imgtec/maguro/proprietary/libusc.so
-cp -a tmp/vendor/bin/pvrsrvctl ../../../../vendor/imgtec/maguro/proprietary/pvrsrvctl
 sudo umount tmp
 rm -rf tmp
 rm -rf yakju-jdq39

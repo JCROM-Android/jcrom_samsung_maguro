@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "Download and Deodexing... Please wait."
-wget -nc -q https://dl.google.com/dl/android/aosp/yakju-jwr66v-factory-ad817ccc.tgz
-tar zxf yakju-jwr66v-factory-ad817ccc.tgz
-cd yakju-jwr66v
-unzip image-yakju-jwr66v.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/yakju-jwr66y-factory-09207065.tgz
+tar zxf yakju-jwr66y-factory-09207065.tgz
+cd yakju-jwr66y
+unzip image-yakju-jwr66y.zip
 cd ../
-./simg2img yakju-jwr66v/system.img system.ext4.img
+./simg2img yakju-jwr66y/system.img system.ext4.img
 mkdir system
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
@@ -70,6 +70,6 @@ cp -a tmp/vendor/lib/libfrsdk.so system/vendor/lib/libfrsdk.so
 
 sudo umount tmp
 rm -rf tmp
-rm -rf yakju-jwr66v
+rm -rf yakju-jwr66y
 rm system.ext4.img
 

@@ -21,4 +21,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.est_max_time=800 \
     ro.facelock.use_intro_anim=true \
     camera.flash_off=0 \
-    ro.com.google.mcc_fallback=262   
+    ro.com.google.mcc_fallback=262
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.ui.phone=320 \
+    persist.sys.ui.tablet=192
+

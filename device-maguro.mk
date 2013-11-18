@@ -4,6 +4,13 @@ PRODUCT_PACKAGES += \
     Browser \
     Gallery2
 
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.voice.capable=true
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.sms.capable=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.ui.phone=320 \
+    persist.sys.ui.tablet=192
+
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/media/video/AndroidInSpace.480p.mp4:system/media/video/AndroidInSpace.480p.mp4 \
 	$(LOCAL_PATH)/proprietary/system/media/video/AndroidInSpace.240p.mp4:system/media/video/AndroidInSpace.240p.mp4 \

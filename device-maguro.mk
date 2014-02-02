@@ -1,9 +1,5 @@
 LOCAL_PATH := jcrom/samsung/maguro
 
-PRODUCT_PACKAGES += \
-    Browser \
-    Gallery2
-
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.voice.capable=true
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.sms.capable=true
 

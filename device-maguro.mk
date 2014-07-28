@@ -5,7 +5,8 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.sms.capable=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ui.phone=320 \
-    persist.sys.ui.tablet=192
+    persist.sys.ui.tablet=192 \
+    persist.sys.ui.phablet=245
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/system/media/video/AndroidInSpace.480p.mp4:system/media/video/AndroidInSpace.480p.mp4 \
